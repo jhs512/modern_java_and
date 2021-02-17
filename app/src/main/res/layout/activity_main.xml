@@ -9,28 +9,18 @@
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".ui.MainActivity">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="검색어를 입력해주세요."
-            android:text="@={vm.lvTitle}" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{vm.lvTitle}" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="당신의 이름을 입력해주세요."
-            android:text="@={vm.lvName}" />
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:borderRadius="@{150}"
+            app:imageUrl="@{vm.lvImageUrl}" />
 
     </LinearLayout>
 </layout>
