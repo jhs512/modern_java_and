@@ -4,8 +4,8 @@
     <data>
 
         <variable
-            name="lvMsg"
-            type="androidx.lifecycle.MutableLiveData&lt;String>" />
+            name="vm"
+            type="com.example.sbs.myapplication.ui.MainViewModel" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,38 +13,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".ui.MainActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="검색어를 입력해주세요."
+            android:text="@={vm.lvTitle}" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{lvMsg}" />
+            android:text="@{vm.lvTitle}" />
 
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{lvMsg}" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{lvMsg}" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{lvMsg}" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{lvMsg}" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{lvMsg}" />
-
+            android:hint="당신의 이름을 입력해주세요."
+            android:text="@={vm.lvName}" />
 
     </LinearLayout>
 </layout>
