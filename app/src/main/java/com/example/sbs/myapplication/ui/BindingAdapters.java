@@ -34,8 +34,6 @@ public class BindingAdapters {
     @BindingAdapter({"imageUrl", "borderRadius"})
     public static void loadImage(ImageView imageView, String imageUrl, int borderRadius) {
 
-        Util.log("imageUrl : " + imageUrl);
-
         RequestBuilder<Drawable> rb = Glide.with(imageView.getContext())
                 .load(imageUrl)
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE);
